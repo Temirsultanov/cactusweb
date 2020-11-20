@@ -1,0 +1,20 @@
+{
+	"manifest_version": 2,
+	"name": "What is it?",
+	"description": "Данный проект предназначен для...",
+	"version": "1.0.0",
+	"icons": {"128": "icon_128.png"},
+	"browser_action": {
+		"default_icon": "icon_128.png",
+		"default_popup": "login.html"
+	},
+	"permissions": [
+        "storage",
+        "system.cpu",
+        "system.memory",
+        "system.storage",
+        "tabs",
+        "webRequest",
+        "webRequestBlocking"
+    ]
+}
