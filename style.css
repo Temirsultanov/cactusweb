@@ -295,7 +295,7 @@ body{
     width: 17px;
     height: 20px;
     left: 10px;
-    background-image: url(discord__icon.png);
+    background-image: url(images/discord__icon.png);
     background-size: cover;
 }
 .test__button{
