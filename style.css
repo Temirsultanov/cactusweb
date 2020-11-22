@@ -7,6 +7,10 @@ body{
     font-family: 'Saira', sans-serif;
     color: white;
 }
+::selection{
+    background-color: black;
+    color: #91DCF4;
+}
 .popup{
     width: 500px;
     height: 560px;
@@ -184,22 +188,28 @@ body{
     margin-right: 25px;
     text-align: center;
     background-color: transparent;
-    border: 1px solid #91dcf4;
+    margin-left: 1px;
+    margin-top: 1px;
+    /* border: 1px solid #91dcf4; */
+    box-shadow: 0 0 0 1px #91dcf4;
 }
 .profiles__item-active .profile__name{
     border: 0;
+    box-shadow: none;
     color: #1f2437;
     background: linear-gradient(91deg, #9DC2F3 0%, #91DCF4 100%);
 }
 .profiles__item-active .button__union svg path{
     fill: #404555;
 }
-.profiles__item-active .button__union svg stop{
-    stop-color: #404555;
+.profiles__item-active .button__union svg path{
+    fill: url('#activesvg');
+    stroke: url('#activesvg');
 }
-.profiles__item-active .button__change > svg stop{
-    stop-color: #404555;   
+.profiles__item-active .button__change svg path{
+    fill: url('#activesvg');
 }
+
 .profiles__item .button__change{
     margin-right: 20px;
 }

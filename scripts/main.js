@@ -7,7 +7,6 @@
     let profilesBlocks = window.profilesWrap.querySelectorAll('.profiles__item');
     let settingsButton = profilesPage.querySelector('.settings__button');
     let createProfileButton = profilesPage.querySelector('.create__profile');
-    window.profileIndex = 0;
 
     // Functions
     const onSettingsButtonClick = function (evt) {
@@ -20,24 +19,58 @@
         createProfilePage.classList.remove('dn');
         document.title = 'Create profile - Cactus Web';
     };
-    const onPlayButtonAddListener = function (profile, index) {
+    const onChangeButtonAddListener = function (profile, index) {
         let profileName = profile.querySelector('.profile__name').textContent;
-        let playButton = profile.querySelector('.button__change');
-        const onPlayButtonClick = function (evt) {
+        let changeButton = profile.querySelector('.button__change');
+        const onChangeButtonClick = function (evt) {
             evt.preventDefault();
-            profilesPage.classList.add('dn');
             window.createChangePage(changeProfilePage, index);
             window.profileIndex = index;
+            profilesPage.classList.add('dn');
             changeProfilePage.classList.remove('dn');
             document.title = `${profileName} - Cactus Web`;
         };
-        playButton.addEventListener('click', onPlayButtonClick);
+        changeButton.addEventListener('click', onChangeButtonClick);
     };
+    const onPlayButtonAddListener = function (profile, index) {
+        let playButton = profile.querySelector('.button__union');
+        const onPlayButtonClick = function (evt) {
+            evt.preventDefault();
+            let profilesBlocks = window.profilesWrap.querySelectorAll('.profiles__item');
+            for (let i = 0; i < window.profiles.length; i++) {
+                if (i == index) {
+                    profile.classList.toggle('profiles__item-active');
+                }
+                else{
+                    profilesBlocks[i].classList.remove('profiles__item-active');
+                }
+            };
+        }
+        playButton.addEventListener('click', onPlayButtonClick);
+    }
+    const onDeleteButtonAddListener = function (profile, index) {
+        let deleteButton = profile.querySelector('.button__delete');
+        const onDeleteButtonClick = function (evt) {
+            evt.preventDefault();
+            window.profiles.splice(index, 1);
+            window.profilesWrap.removeChild(profile);
+        }
+        deleteButton.addEventListener('click', onDeleteButtonClick);
+    };
+    window.profileIndex = 0;
+    window.onDeleteButtonAddListener = onDeleteButtonAddListener;
+    window.onChangeButtonAddListener = onChangeButtonAddListener;
     window.onPlayButtonAddListener = onPlayButtonAddListener;
-
     
+
     for (let i = 0; i < profilesBlocks.length; i++) {
-        onPlayButtonAddListener(profilesBlocks[i], i);
+        onChangeButtonAddListener(profilesBlocks[i], i);
+    };
+    for (let j = 0; j < profilesBlocks.length; j++) {
+        onPlayButtonAddListener(profilesBlocks[j], j);
+    };
+    for (let k = 0; k < profilesBlocks.length; k++) {
+        onDeleteButtonAddListener(profilesBlocks[k], k);
     };
     settingsButton.addEventListener('click', onSettingsButtonClick);
     createProfileButton.addEventListener('click', onCreateProfileButtonClick);

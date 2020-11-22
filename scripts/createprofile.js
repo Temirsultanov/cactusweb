@@ -58,7 +58,9 @@
         let profileItem = window.templateProfile.cloneNode(true);
         let profileName = profileItem.querySelector('.profile__name');
         profileName.textContent = window.profiles[window.profiles.length - 1].name;
+        window.onChangeButtonAddListener(profileItem, window.profiles.length - 1);
         window.onPlayButtonAddListener(profileItem, window.profiles.length - 1);
+        window.onDeleteButtonAddListener(profileItem, window.profiles.length - 1);
         window.profilesWrap.appendChild(profileItem);
         window.resetInputs(createProfilePage);
         profilesPage.classList.remove('dn');
