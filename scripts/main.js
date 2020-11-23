@@ -19,12 +19,18 @@
         createProfilePage.classList.remove('dn');
         document.title = 'Create profile - Cactus Web';
     };
-    const onChangeButtonAddListener = function (profile, index) {
+    const onChangeButtonAddListener = function (profile) {
         let profileName = profile.querySelector('.profile__name').textContent;
         let changeButton = profile.querySelector('.button__change');
         const onChangeButtonClick = function (evt) {
             evt.preventDefault();
-            window.createChangePage(changeProfilePage, index);
+            let profilesBlocks = window.profilesWrap.querySelectorAll('.profiles__item');
+            for (let i = 0; i < window.profiles.length; i++) {
+                if (profile == profilesBlocks[i]) {
+                    index = i;
+                }
+            }
+            window.createChangePage(changeProfilePage, profile);
             window.profileIndex = index;
             profilesPage.classList.add('dn');
             changeProfilePage.classList.remove('dn');
@@ -32,13 +38,13 @@
         };
         changeButton.addEventListener('click', onChangeButtonClick);
     };
-    const onPlayButtonAddListener = function (profile, index) {
+    const onPlayButtonAddListener = function (profile) {
         let playButton = profile.querySelector('.button__union');
         const onPlayButtonClick = function (evt) {
             evt.preventDefault();
             let profilesBlocks = window.profilesWrap.querySelectorAll('.profiles__item');
             for (let i = 0; i < window.profiles.length; i++) {
-                if (i == index) {
+                if (profile == profilesBlocks[i]) {
                     profile.classList.toggle('profiles__item-active');
                 }
                 else{
@@ -48,12 +54,18 @@
         }
         playButton.addEventListener('click', onPlayButtonClick);
     }
-    const onDeleteButtonAddListener = function (profile, index) {
+    const onDeleteButtonAddListener = function (profile) {
         let deleteButton = profile.querySelector('.button__delete');
         const onDeleteButtonClick = function (evt) {
             evt.preventDefault();
+            let profilesBlocks = window.profilesWrap.querySelectorAll('.profiles__item');
+            for (let i = 0; i < window.profiles.length; i++) {
+                if (profile == profilesBlocks[i]) {
+                    index = i;
+                }
+            }
             window.profiles.splice(index, 1);
-            window.profilesWrap.removeChild(profile);
+            window.profilesWrap.removeChild(profile); 
         }
         deleteButton.addEventListener('click', onDeleteButtonClick);
     };
@@ -64,13 +76,13 @@
     
 
     for (let i = 0; i < profilesBlocks.length; i++) {
-        onChangeButtonAddListener(profilesBlocks[i], i);
+        onChangeButtonAddListener(profilesBlocks[i]);
     };
     for (let j = 0; j < profilesBlocks.length; j++) {
-        onPlayButtonAddListener(profilesBlocks[j], j);
+        onPlayButtonAddListener(profilesBlocks[j]);
     };
     for (let k = 0; k < profilesBlocks.length; k++) {
-        onDeleteButtonAddListener(profilesBlocks[k], k);
+        onDeleteButtonAddListener(profilesBlocks[k]);
     };
     settingsButton.addEventListener('click', onSettingsButtonClick);
     createProfileButton.addEventListener('click', onCreateProfileButtonClick);

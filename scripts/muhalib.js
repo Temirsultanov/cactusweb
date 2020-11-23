@@ -5,7 +5,13 @@
             inputs[i].value = '';
         }
     };
-    let createChangePage = function (page, index) {
+    let createChangePage = function (page, profile) {
+        let profilesBlocks = window.profilesWrap.querySelectorAll('.profiles__item');
+        for (let i = 0; i < window.profiles.length; i++) {
+            if (profile == profilesBlocks[i]) {
+                index = i;
+            }
+        }
         page.querySelector('#name').value = window.profiles[index].person.name;
         page.querySelector('#surname').value = window.profiles[index].person.surname;
         page.querySelector('#otch').value = window.profiles[index].person.otch;

@@ -4,7 +4,7 @@
     let templateProfile = document.querySelector('#template__profile').content.querySelector('.profiles__item');
     let profiles = [
         {
-            name: 'Re:Nut',
+            name: 'Nuther1and',
             person : {
                 name: 'Serg',
                 surname: 'Pokrovskoy',
