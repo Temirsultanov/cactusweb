@@ -30,34 +30,36 @@
     };
     const onSaveButtonClick = function (evt) {
         evt.preventDefault();
-        profiles[window.profileIndex] = {
-            name: inputProfileName.value,
-            person : {
-                name: inputName.value,
-                surname: inputSurname.value,
-                otch: inputOtch.value,
-                email: inputEmail.value,  
-            },
-            address : {
-                first : inputFirst.value,
-                second: inputSecond.value,
-                city: inputCity.value,
-                district: inputDistrict.value,
-                country: inputCountry.value,
-                zip: inputZip.value,
-            },
-            pay : {
-                number: inputNumber.value,
-                date: inputDate.value,
-                cvc: inputCvc.value,
-            } 
+        if (window.checkValid(changeProfilePage)) {
+            profiles[window.profileIndex] = {
+                name: inputProfileName.value,
+                person : {
+                    name: inputName.value,
+                    surname: inputSurname.value,
+                    otch: inputOtch.value,
+                    email: inputEmail.value,  
+                },
+                address : {
+                    first : inputFirst.value,
+                    second: inputSecond.value,
+                    city: inputCity.value,
+                    district: inputDistrict.value,
+                    country: inputCountry.value,
+                    zip: inputZip.value,
+                },
+                pay : {
+                    number : inputNumber.value.slice(0, 4) + inputNumber.value.slice(6, 10) + inputNumber.value.slice(12, 16) + inputNumber.value.slice(18, 22),
+                    date: inputDate.value,
+                    cvc: inputCvc.value,
+                } 
+            }
+            window.resetInputs(changeProfilePage);
+            profilesPage.querySelectorAll('.profiles__item')[window.profileIndex]
+                        .querySelector('.profile__name')
+                        .textContent = window.profiles[window.profileIndex].name;
+            profilesPage.classList.remove('dn');
+            changeProfilePage.classList.add('dn');    
         }
-        window.resetInputs(changeProfilePage);
-        profilesPage.querySelectorAll('.profiles__item')[window.profileIndex]
-                    .querySelector('.profile__name')
-                    .textContent = window.profiles[window.profileIndex].name;
-        profilesPage.classList.remove('dn');
-        changeProfilePage.classList.add('dn');
     };
     saveButton.addEventListener('click', onSaveButtonClick);
     backButton.addEventListener('click', onBackButtonClick);

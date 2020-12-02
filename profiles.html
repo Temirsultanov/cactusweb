@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,76 +16,62 @@
                     Profiles
                 </h1>
                 <button class="settings__button">
-                    <img src="images/setting__icon.svg" alt="">
+                    <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9.59.75v3.21l-1.6.8-2.42-2.4-3.21 3.21 2.4 2.41-.8 1.6H.75v4.83h3.21l.8 1.6-2.4 2.42 3.21 3.21 2.41-2.4 1.6.8v3.21h4.83v-3.21l1.6-.8 2.42 2.4 3.21-3.21-2.4-2.41.8-1.6h3.21V9.58h-3.21l-.8-1.6 2.4-2.42-3.21-3.21-2.41 2.4-1.6-.8V.75H9.58z" stroke="url(#settings1_linear)"/>
+                            <path d="M12 15a3 3 0 100-6 3 3 0 000 6z" stroke="url(#settings_linear)"/>
+                        </g>
+                        <defs>
+                            <linearGradient id="settings1_linear" x1=".75" y1=".75" x2="23.8" y2="1.33" gradientUnits="userSpaceOnUse">
+                                <stop id="settings__stopcolor__first" stop-color="#9DC2F3"/><stop offset="1" stop-color="#91DCF4"/>
+                            </linearGradient>
+                            <linearGradient id="settings_linear" x1="9" y1="9" x2="15.15" y2="9.15" gradientUnits="userSpaceOnUse">
+                                <stop id="settings__stopcolor__first" stop-color="#9DC2F3"/><stop offset="1" stop-color="#91DCF4"/>
+                            </linearGradient>
+                            <!-- <linearGradient id="activesettingssvg" x1="9" y1="9" x2="15.15" y2="9.15" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#fff"/><stop offset="1" stop-color="#fff"/>
+                            </linearGradient> -->
+                            <clipPath id="clip0">
+                                <path fill="#fff" d="M0 0h24v24H0z"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
                 </button>
             </header>
             <div class="profiles">
                 <template id="template__profile">
                     <div class="profiles__item">
-                        <div class="profile__name">
+                        <div class="profile">
+                            <h4 class="h4 profile__name">
+                            </h4>
+                            <button type="button" class="button__union">
+                                <svg width="16" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M.75 22.5v-21l14 10.46-14 10.54z" stroke="url(#unionsvg)" stroke-width="1.5"/><defs><linearGradient id="unionsvg" x1="0" y1="0" x2="16.4" y2=".28" gradientUnits="userSpaceOnUse"><stop class="unionstopfirst"stop-color="#9DC2F3"/><stop offset="1" stop-color="#91DCF4"/></linearGradient></defs></svg>
+                            </button>
+                            <button type="button" class="button__change">
+                                <svg width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.6 21.5c.07 0 .14 0 .2-.02l5.52-.96a.32.32 0 00.18-.1l13.9-13.9a.33.33 0 000-.47L15.95.6a.32.32 0 00-.23-.1.32.32 0 00-.23.1L1.58 14.5a.33.33 0 00-.1.18L.53 20.2a1.1 1.1 0 00.3.98c.22.2.5.32.79.32zm1.15-6L15.72 2.37l3.9 3.91L6.5 18.88l-4.13.75.38-4.13z" fill="url(#changesvg)"/><defs><linearGradient id="changesvg" x1=".5" y1=".5" x2="22.02" y2="1.04" gradientUnits="userSpaceOnUse"><stop class="changestopfirst" stop-color="#9DC2F3"/><stop offset="1" stop-color="#91DCF4"/></linearGradient></defs></svg>
+                            </button>
+                            <button type="button" class="button__delete">
+                                <svg width="27" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.57 11.6a.75.75 0 00-.75.74v14.17a.75.75 0 001.5 0V12.34a.75.75 0 00-.75-.75z" fill="url(#deletesvg)"/><path d="M18.41 11.6a.75.75 0 00-.75.74v14.17a.75.75 0 001.5 0V12.34a.75.75 0 00-.75-.75z" fill="url(#deletesvg)"/><path d="M14 11.6a.75.75 0 00-.76.74v14.17a.75.75 0 001.5 0V12.34a.75.75 0 00-.75-.75z" fill="url(#deletesvg)"/><path fill-rule="evenodd" clip-rule="evenodd" d="M21.08 32H6.9a3.7 3.7 0 01-2.67-1.16A4.13 4.13 0 013.13 28V9.53a2.86 2.86 0 01.73-5.63H7.7v-.97A2.94 2.94 0 0110.67 0h6.65a2.94 2.94 0 012.97 2.93v.97h3.83a2.86 2.86 0 01.74 5.63v18.46c0 1.1-.4 2.12-1.1 2.85A3.69 3.69 0 0121.08 32zM9.2 2.96v.94h9.59v-.94-.06a1.44 1.44 0 00-1.47-1.4h-6.65A1.44 1.44 0 009.2 2.9v.06zM6.9 30.5h14.18c1.28 0 2.28-1.1 2.28-2.51V9.59H4.62V28c0 1.41 1 2.51 2.28 2.51zM24.12 5.4H3.86a1.35 1.35 0 100 2.7h20.26a1.35 1.35 0 100-2.7z" fill="url(#deletesvg)"/><defs><linearGradient id="deletesvg" x1="1" y1="0" x2="27.63" y2=".54" gradientUnits="userSpaceOnUse"><stop class="deletestopfirst" stop-color="#9DC2F3"/><stop offset="1" stop-color="#91DCF4"/></linearGradient></defs></svg>
+                            </button>
                         </div>
-                        <button class="button__union">
-                            <svg width="16" height="24" viewBox="0 0 16 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.75 22.4967V1.49674L14.75 11.9587L0.75 22.4967Z" stroke="url(#paintl_linear)" stroke-width="1.5"/>
-                                <defs>
-                                <linearGradient id="paintl_linear" x1="0" y1="0" x2="16.3985" y2="0.275443" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#9DC2F3"/>
-                                <stop offset="1" stop-color="#91DCF4"/>
-                                </linearGradient>
-                                <linearGradient id="activesvg" x1="0" y1="0" x2="16.3985" y2="0.275443" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#404555"/>
-                                    <stop offset="1" stop-color="#404555"/>
-                                    </linearGradient>
-                                </defs>
-                            </svg>                            
-                        </button>
-                        <button class="button__change">
-                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1.60695 21.5C1.67257 21.5 1.73819 21.4934 1.80381 21.4836L7.32232 20.5156C7.38794 20.5025 7.45028 20.473 7.49621 20.4237L21.4041 6.51453C21.4345 6.48417 21.4586 6.44812 21.4751 6.40842C21.4915 6.36873 21.5 6.32618 21.5 6.2832C21.5 6.24023 21.4915 6.19768 21.4751 6.15798C21.4586 6.11829 21.4345 6.08223 21.4041 6.05188L15.9512 0.595156C15.8888 0.532813 15.8068 0.5 15.7182 0.5C15.6296 0.5 15.5476 0.532813 15.4853 0.595156L1.57742 14.5044C1.52821 14.5536 1.49868 14.6127 1.48556 14.6783L0.517686 20.1973C0.485769 20.3731 0.497173 20.554 0.550912 20.7244C0.60465 20.8948 0.699103 21.0495 0.826093 21.1752C1.04263 21.3852 1.31495 21.5 1.60695 21.5ZM2.75 15.5L15.7182 2.375L19.625 6.2832L6.5 18.875L2.375 19.625L2.75 15.5Z" fill="url(#1)"/>
-                                <defs>
-                                <linearGradient id="1" x1="0.5" y1="0.5" x2="22.0154" y2="1.04209" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#9DC2F3"/>
-                                <stop offset="1" stop-color="#91DCF4"/>
-                                </linearGradient>
-                                <linearGradient id="activesvg" x1="0.5" y1="0.5" x2="22.0154" y2="1.04209" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#404555"/>
-                                    <stop offset="1" stop-color="#404555"/>
-                                </linearGradient>
-                                </defs>
-                            </svg>
-                        </button>
-                        <button class="button__delete">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0)">
-                                <path d="M15.2483 9.25737C15.2483 9.22306 15.276 9.19531 15.3104 9.19531C15.3447 9.19531 15.3724 9.22306 15.3724 9.25737V19.8803C15.3724 19.9145 15.3445 19.9424 15.3104 19.9424C15.2762 19.9424 15.2483 19.9145 15.2483 19.8803V9.25737Z" stroke="url(#paint0_linear)"/>
-                                <path d="M8.61597 9.25737C8.61597 9.22307 8.64372 9.19531 8.67803 9.19531C8.71234 9.19531 8.74009 9.22307 8.74009 9.25737V19.8803C8.74009 19.9145 8.71221 19.9424 8.67803 19.9424C8.64385 19.9424 8.61597 19.9145 8.61597 19.8803V9.25737Z" stroke="url(#paint1_linear)"/>
-                                <path d="M4.34439 6.76019V7.14479V20.9927C4.34439 21.691 4.6006 22.334 5.0312 22.7869L5.03247 22.7883C5.4601 23.2414 6.0552 23.4987 6.67794 23.4998H17.3105C17.9336 23.4987 18.5286 23.2414 18.956 22.7883L18.9573 22.7869C19.3879 22.334 19.6441 21.691 19.6441 20.9927V7.14479V6.76019L20.0158 6.66152C20.8153 6.44932 21.3334 5.67694 21.2265 4.85646C21.1193 4.03631 20.4206 3.42276 19.5932 3.42254C19.5932 3.42254 19.5932 3.42254 19.5931 3.42254H16.7155H16.2155V2.92254V2.21996V2.21718H16.2156C16.2181 1.76018 16.0374 1.32131 15.7138 0.998366C15.3903 0.675733 14.9507 0.496077 14.4938 0.499813L14.4897 0.499846V0.49983H9.49879H9.4947L9.4947 0.499813C9.03775 0.496077 8.59823 0.675733 8.27469 0.998366L4.34439 6.76019ZM4.34439 6.76019L3.97266 6.66152M4.34439 6.76019L3.97266 6.66152M3.97266 6.66152C3.17324 6.44933 2.65512 5.67701 2.76202 4.85657L3.97266 6.66152ZM7.77296 2.21996H7.77295V2.92254V3.42254H7.27295H4.39535C4.39532 3.42254 4.39528 3.42254 4.39525 3.42254C3.56792 3.42276 2.8692 4.03631 2.76203 4.85646L7.77296 2.21996ZM7.77296 2.21996L7.77294 2.21718M7.77296 2.21996L7.77294 2.21718M7.77294 2.21718C7.77039 1.76022 7.95104 1.32139 8.2746 0.998459L7.77294 2.21718ZM16.0914 3.42254H15.5914H8.39707H7.89707V2.92254V2.22286C7.89256 1.79616 8.06068 1.3858 8.36328 1.08471C8.6657 0.783567 9.07661 0.617868 9.50269 0.623948H14.4858C14.9118 0.617869 15.3227 0.783537 15.6251 1.08463M16.0914 3.42254L15.6251 1.08463M16.0914 3.42254V2.92254V2.22282V3.42254ZM15.6251 1.08463C15.625 1.08453 15.6249 1.08443 15.6248 1.08433L15.2724 1.43901L15.6252 1.08471L15.6251 1.08463ZM16.7155 2.42254V2.21996L17.2155 2.92254H16.7155V2.42254ZM4.96851 6.69419H4.46851V7.19419V20.9927C4.46851 22.2791 5.39507 23.3756 6.67708 23.3756H17.3114C18.5934 23.3756 19.52 22.2791 19.52 20.9927V7.19419V6.69419H19.02H4.96851ZM19.5932 3.54666H4.39525C3.56034 3.54666 2.88354 4.22345 2.88354 5.05836C2.88354 5.89327 3.56034 6.57007 4.39525 6.57007H19.5932C20.4282 6.57007 21.1049 5.89327 21.1049 5.05836C21.1049 4.22345 20.4282 3.54666 19.5932 3.54666Z" stroke="url(#paint2_linear)"/>
-                                <path d="M11.9321 9.25737C11.9321 9.22306 11.9599 9.19531 11.9942 9.19531C12.0285 9.19531 12.0562 9.22306 12.0562 9.25737V19.8803C12.0562 19.9145 12.0284 19.9424 11.9942 19.9424C11.96 19.9424 11.9321 19.9145 11.9321 19.8803V9.25737Z" stroke="url(#paint3_linear)"/>
-                                </g>
-                                <defs>
-                                <linearGradient id="paint0_linear" x1="14.7483" y1="8.69531" x2="15.9007" y2="8.69809" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#9DC2F3"/>
-                                <stop offset="1" stop-color="#91DCF4"/>
-                                </linearGradient>
-                                <linearGradient id="paint1_linear" x1="8.11597" y1="8.69531" x2="9.26841" y2="8.69809" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#9DC2F3"/>
-                                <stop offset="1" stop-color="#91DCF4"/>
-                                </linearGradient>
-                                <linearGradient id="paint2_linear" x1="2.24805" y1="-0.000244141" x2="22.2232" y2="0.408511" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#9DC2F3"/>
-                                <stop offset="1" stop-color="#91DCF4"/>
-                                </linearGradient>
-                                <linearGradient id="paint3_linear" x1="11.4321" y1="8.69531" x2="12.5846" y2="8.69809" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#9DC2F3"/>
-                                <stop offset="1" stop-color="#91DCF4"/>
-                                </linearGradient>
-                                <clipPath id="clip0">
-                                <rect width="24" height="24" fill="white"/>
-                                </clipPath>
-                                </defs>
-                            </svg>
-                        </button>
+                        <div class="dn profiles-delete">
+                            <h4 class="h4 delete__title">
+                                Profile deleted
+                            </h4>
+                            <div class="delete__right">
+                                <div class="delete__timer">
+                                    6
+                                </div>
+                                <button class="h5 cancel__button">
+                                    Cancel
+                                </button>
+                            </div>
+                        </div>
+                        <h4 class="dn h4 profiles-add">
+                            Profile added
+                        </h4>
                     </div>
+                    
                 </template>
                 
             </div>
@@ -99,7 +85,8 @@
                     Create profile
                 </h1>
                 <button class="back__button">
-                    <img src="images/back__icon.svg" alt="">
+                    <div class="back__button-circle"></div>
+                    <svg width="8" height="14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 1L1.35 6.65a.5.5 0 000 .7L7 13" stroke="#1F2437"/></svg>
                 </button>
             </header>
             <form class="form__profile" action="#" method="POST">
@@ -107,33 +94,75 @@
                     Your data
                 </h2>
                 <div class="form__item">
-                    <input id="name" name="name" class="form__input" type="text" placeholder="Name">
-                    <input id="surname" name="surname" class="form__input" type="text" placeholder="Surname">
-                    <input id="otch" name="otch" class="form__input" type="text" placeholder="Otchestvo">
-                    <input id="email" name="email" class="form__input" type="email" placeholder="Email">
+                    <div class="form__input-wrap">
+                        <input id="name" name="name" class="form__input" type="text" placeholder="Example: Boris">
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="form__input-wrap">
+                        <input id="surname" name="surname" class="form__input" type="text" placeholder="Example: Godunov">
+                        <label for="surname">Surname</label>
+                    </div>
+                    <div class="form__input-wrap">
+                        <input id="otch" name="otch" class="form__input" type="text" placeholder="Example: Fedorovich">
+                        <label for="otch">Otchestvo</label>
+                    </div>
+                    <div class="form__input-wrap">
+                        <input id="email" name="email" class="form__input" type="email" placeholder="Example: tsar@gmail.com">
+                        <label for="email">Email</label>
+                    </div>                
                 </div>
                 <h2 class="h2">
                     Address
                 </h2>
                 <div class="form__item">
-                    <input id="first" name="first" class="form__input form__input-big" type="text" placeholder="First address">
-                    <input id="second" name="second" class="form__input form__input-big" type="text" placeholder="Second address">
-                    <input id="city" name="city" class="form__input" type="text" placeholder="City">
-                    <input id="zip" name="zip" class="form__input" type="text" placeholder="Zip \ Postal code">
-                    <input id="country" name="country" class="form__input" type="text" placeholder="Country">
-                    <input id="district" name="district" class="form__input" type="text" placeholder="State \ District">
+                    <div class="form__input-wrap w100">
+                        <input id="first" name="first" class="form__input form__input-big" type="text" placeholder="Example: Krasnih Vorobyev Street 12">
+                        <label for="first">First address</label>
+                    </div>
+                    <div class="form__input-wrap w100">
+                        <input id="second" name="second" class="form__input form__input-big" type="text" placeholder="Example: Svyatogo Pavla Street 4a">
+                        <label for="second">Second address</label>
+                    </div>
+                    <div class="form__input-wrap">
+                        <input id="city" name="city" class="form__input" type="text" placeholder="Example: Chelyabinsk">
+                        <label for="city">City</label>
+                    </div>
+                    <div class="form__input-wrap">
+                        <input id="zip" name="zip" class="form__input" type="text" placeholder="Example: 534276">
+                        <label for="zip">Zip \ Postal code</label>
+                    </div>
+                    <div class="form__input-wrap">
+                        <input id="country" name="country" class="form__input" type="text" placeholder="Example: Rusb">
+                        <label for="country">Country</label>
+                    </div>
+                    <div class="form__input-wrap">
+                        <input id="district" name="district" class="form__input" type="text" placeholder="Example: Alabama">
+                        <label for="district">State \ District</label>
+                    </div>
                 </div>
                 <h2 class="h2">
                     Pay
                 </h2>
-                <div class="form__item form__item-pay">    
-                    <input id="number" name="number" class="form__input form__input-number" type="text" placeholder="Card number">
-                    <input id="date" name="date" class="form__input form__input-date" type="text" placeholder="Date">
-                    <input id="cvc" name="cvc" class="form__input form__input-cvc" type="text" placeholder="CVC">
+                <div class="form__item form__item-pay">  
+                    <div class="form__input-wrap">
+                        <input id="number" name="number" class="form__input form__input-number" type="text" placeholder="Example: 1234 5678 9123 4567" autocomplete="off">
+                        <label for="number">Card number</label>
+                    </div>  
+                    <div class="form__input-wrap">
+                        <input id="date" name="date" class="form__input form__input-date" type="text" placeholder="01 / 21" autocomplete="off">
+                        <label for="date">Date</label>
+                    </div>                
+                    <div class="form__input-wrap">
+                        <input id="cvc" name="cvc" class="form__input form__input-cvc" type="text" placeholder="123" maxlength="3" autocomplete="off">
+                        <label for="cvc">CVC</label>
+                    </div>
                 </div>
                 <div class="form__item form__item-last">
-                    <input id="profilename" name="profilename" class="form__input form__input-name" type="text" placeholder="Profile name">
-                    <input class="blue__button save__button" type="submit" value="Save">
+                    <div class="form__input-wrap">
+                        <input id="profilename" name="profilename" class="form__input form__input-name" type="text" placeholder="Example: bori5g0dunoff" autocomplete="off"> 
+                        <label for="profilename">Profile name</label>
+                    </div>
+                    <button class="blue__button save__button " type="submit" value="Save">Save</button>
                 </div>
             </form>
         </main>
@@ -143,27 +172,31 @@
                     Settings
                 </h1>
                 <button class="back__button">
-                    <img src="images/back__icon.svg" alt="">
+                    <div class="back__button-circle"></div>
+                    <svg width="8" height="14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 1L1.35 6.65a.5.5 0 000 .7L7 13" stroke="#1F2437"/></svg> 
                 </button>
             </header>
             <form class="discord">
                 <span class="discord__logo"></span>
-                <input type="text" class="form__input form__input-discord" placeholder="discord webhook">
+                <div class="form__input-wrap">
+                    <input type="text" name="discordwebhook" class="form__input form__input-discord" placeholder="Example : name#1234">
+                    <label for="discordwebhook">discord webhook</label>
+                </div>
                 <button class="test__button">test webhook</button>
-                <input type="submit" class="blue__button" value="Save">
+                <button type="submit" class="blue__button save__button" value="Save">Save</button>
             </form>
             <div class="import">
                 <h3 class="h3">Import</h3>
                 <form action="#" method="POST" class="form__import">
                     <textarea placeholder="JSON text for import\export" ></textarea>
-                    <input type="submit" class="blue__button" value="Import">
+                    <button type="submit" class="blue__button import__button" value="Import">Import</button>
                 </form>
                 
             </div>
             <div class="export">
                 <h3 class="h3">Export</h3>
                 <form action="#" method="POST" class="form__export">
-                    <input type="submit" class="blue__button" value="Export">
+                    <button type="submit" class="blue__button export__button" value="Export">Export</button>
                 </form>
             </div>
         </main>
@@ -173,7 +206,8 @@
                     Change profile
                 </h1>
                 <button class="back__button">
-                    <img src="images/back__icon.svg" alt="">
+                    <div class="back__button-circle"></div>
+                    <svg width="8" height="14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 1L1.35 6.65a.5.5 0 000 .7L7 13" stroke="#1F2437"/></svg>
                 </button>
             </header>
             <form class="form__profile" action="#" method="POST">
@@ -181,33 +215,75 @@
                     Your data
                 </h2>
                 <div class="form__item">
-                    <input id="name" name="name" class="form__input" type="text" placeholder="Name">
-                    <input id="surname" name="surname" class="form__input" type="text" placeholder="Surname">
-                    <input id="otch" name="otch" class="form__input" type="text" placeholder="Otchestvo">
-                    <input id="email" name="email" class="form__input" type="email" placeholder="Email">
+                    <div class="form__input-wrap">
+                        <input id="name" name="name" class="form__input" type="text" placeholder="Example: Boris">
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="form__input-wrap">
+                        <input id="surname" name="surname" class="form__input" type="text" placeholder="Example: Godunov">
+                        <label for="surname">Surname</label>
+                    </div>
+                    <div class="form__input-wrap">
+                        <input id="otch" name="otch" class="form__input" type="text" placeholder="Example: Fedorovich">
+                        <label for="otch">Otchestvo</label>
+                    </div>
+                    <div class="form__input-wrap">
+                        <input id="email" name="email" class="form__input" type="email" placeholder="Example: tsar@gmail.com">
+                        <label for="email">Email</label>
+                    </div>                
                 </div>
                 <h2 class="h2">
                     Address
                 </h2>
                 <div class="form__item">
-                    <input id="first" name="first" class="form__input form__input-big" type="text" placeholder="First address">
-                    <input id="second" name="second" class="form__input form__input-big" type="text" placeholder="Second address">
-                    <input id="city" name="city" class="form__input" type="text" placeholder="City">
-                    <input id="zip" name="zip" class="form__input" type="text" placeholder="Zip \ Postal code">
-                    <input id="country" name="country" class="form__input" type="text" placeholder="Country">
-                    <input id="district" name="district" class="form__input" type="text" placeholder="State \ District">
+                    <div class="form__input-wrap w100">
+                        <input id="first" name="first" class="form__input form__input-big" type="text" placeholder="Example: Krasnih Vorobyev Street 12">
+                        <label for="first">First address</label>
+                    </div>
+                    <div class="form__input-wrap w100">
+                        <input id="second" name="second" class="form__input form__input-big" type="text" placeholder="Example: Svyatogo Pavla Street 4a">
+                        <label for="second">Second address</label>
+                    </div>
+                    <div class="form__input-wrap">
+                        <input id="city" name="city" class="form__input" type="text" placeholder="Example: Chelyabinsk">
+                        <label for="city">City</label>
+                    </div>
+                    <div class="form__input-wrap">
+                        <input id="zip" name="zip" class="form__input" type="text" placeholder="Example: 534276">
+                        <label for="zip">Zip \ Postal code</label>
+                    </div>
+                    <div class="form__input-wrap">
+                        <input id="country" name="country" class="form__input" type="text" placeholder="Example: Rusb">
+                        <label for="country">Country</label>
+                    </div>
+                    <div class="form__input-wrap">
+                        <input id="district" name="district" class="form__input" type="text" placeholder="Example: Alabama">
+                        <label for="district">State \ District</label>
+                    </div>
                 </div>
                 <h2 class="h2">
                     Pay
                 </h2>
-                <div class="form__item form__item-pay">    
-                    <input id="number" name="number" class="form__input form__input-number" type="text" placeholder="Card number">
-                    <input id="date" name="date" class="form__input form__input-date" type="text" placeholder="Date">
-                    <input id="cvc" name="cvc" class="form__input form__input-cvc" type="text" placeholder="CVC">
+                <div class="form__item form__item-pay">  
+                    <div class="form__input-wrap">
+                        <input id="number" name="number" class="form__input form__input-number" type="text" placeholder="Example: 1234 5678 9123 4567" autocomplete="off">
+                        <label for="number">Card number</label>
+                    </div>  
+                    <div class="form__input-wrap">
+                        <input id="date" name="date" class="form__input form__input-date" type="text" placeholder="01 / 21" autocomplete="off">
+                        <label for="date">Date</label>
+                    </div>                
+                    <div class="form__input-wrap">
+                        <input id="cvc" name="cvc" class="form__input form__input-cvc" type="text" placeholder="123" maxlength="3" autocomplete="off">
+                        <label for="cvc">CVC</label>
+                    </div>
                 </div>
                 <div class="form__item form__item-last">
-                    <input id="profilename" name="profilename" class="form__input form__input-name" type="text" placeholder="Profile name">
-                    <input class="blue__button save__button" type="submit" value="Save">
+                    <div class="form__input-wrap">
+                        <input id="profilename" name="profilename" class="form__input form__input-name" type="text" placeholder="Example: bori5g0dunoff" autocomplete="off"> 
+                        <label for="profilename">Profile name</label>
+                    </div>
+                    <button class="blue__button save__button " type="submit" value="Save">Save</button>
                 </div>
             </form>
         </main>
@@ -229,6 +305,7 @@
         </footer>
     </section>
     <script src="scripts/muhalib.js"></script>
+    <script src="scripts/inputs.js"></script>
     <script src="scripts/profiles.js"></script>
     <script src="scripts/createprofile.js"></script>
     <script src="scripts/changeprofile.js"></script>
