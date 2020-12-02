@@ -128,7 +128,7 @@
                         <label for="city">City</label>
                     </div>
                     <div class="form__input-wrap">
-                        <input id="zip" name="zip" class="form__input" type="text" placeholder="Example: 534276">
+                        <input id="zip" name="zip" class="form__input" type="number" placeholder="Example: 534276">
                         <label for="zip">Zip \ Postal code</label>
                     </div>
                     <div class="form__input-wrap">
@@ -153,7 +153,7 @@
                         <label for="date">Date</label>
                     </div>                
                     <div class="form__input-wrap">
-                        <input id="cvc" name="cvc" class="form__input form__input-cvc" type="text" placeholder="123" maxlength="3" autocomplete="off">
+                        <input id="cvc" name="cvc" class="form__input form__input-cvc" type="number" placeholder="123" maxlength="3" autocomplete="off">
                         <label for="cvc">CVC</label>
                     </div>
                 </div>
@@ -178,11 +178,13 @@
             </header>
             <form class="discord">
                 <span class="discord__logo"></span>
-                <div class="form__input-wrap">
-                    <input type="text" name="discordwebhook" class="form__input form__input-discord" placeholder="Example : name#1234">
-                    <label for="discordwebhook">discord webhook</label>
+                <div class="form__item">
+                    <div class="form__input-wrap">
+                        <input type="text" name="discordwebhook" class="form__input form__input-discord" placeholder="Example : name#1234">
+                        <label for="discordwebhook">discord webhook</label>
+                    </div>
+                    <button class="test__button">test webhook</button>
                 </div>
-                <button class="test__button">test webhook</button>
                 <button type="submit" class="blue__button save__button" value="Save">Save</button>
             </form>
             <div class="import">
@@ -249,7 +251,7 @@
                         <label for="city">City</label>
                     </div>
                     <div class="form__input-wrap">
-                        <input id="zip" name="zip" class="form__input" type="text" placeholder="Example: 534276">
+                        <input id="zip" name="zip" class="form__input" type="number" placeholder="Example: 534276">
                         <label for="zip">Zip \ Postal code</label>
                     </div>
                     <div class="form__input-wrap">
@@ -274,7 +276,7 @@
                         <label for="date">Date</label>
                     </div>                
                     <div class="form__input-wrap">
-                        <input id="cvc" name="cvc" class="form__input form__input-cvc" type="text" placeholder="123" maxlength="3" autocomplete="off">
+                        <input id="cvc" name="cvc" class="form__input form__input-cvc" type="number" placeholder="123" maxlength="3" autocomplete="off">
                         <label for="cvc">CVC</label>
                     </div>
                 </div>

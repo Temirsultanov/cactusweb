@@ -14,6 +14,7 @@ body{
 .popup{
     width: 500px;
     height: 560px;
+    position: relative; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -53,6 +54,14 @@ body{
 .h4{
     font-weight: 400;
     font-size: 16px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield;
 }
 .popup button{
     font-family: 'Saira', sans-serif;
@@ -249,14 +258,14 @@ body{
 }
 .header{
     display: flex;
-    position: relative;
+    /* position: relative; */
 }
 .settings__button{
     position: absolute;
-    bottom: -9px;
+    top: 7px;
     height: 44px;
     box-sizing: border-box;
-    right: -113px;
+    right: 6px;
     padding: 10px;
     background-color: transparent;
     border: 0;
@@ -286,8 +295,8 @@ body{
     display: flex;
     position: absolute;
     border: 0;
-    bottom: -10px;
-    left: -97px;
+    top: 8px;
+    left: 20px;
     padding: 10px;
     background-color: transparent;
     /* position: relative; */
@@ -565,6 +574,9 @@ body{
 .save__button:after{
     content: 'Save';
 }
+.save__button{
+    width: 72px;
+}
 .export__button:after{
     content: 'Export';
 }
@@ -611,7 +623,7 @@ body{
 }
 .form__input-name{
     width: 345px;
-    margin-right: 20px;
+    margin-right: 23px;
 }
 .form__item-pay {
     margin-left: -15px;
@@ -622,7 +634,7 @@ body{
 .form__item-last{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 .import, .export, .discord {
     width: 440px;
@@ -635,6 +647,15 @@ body{
     display: flex;
     flex-wrap: wrap;
 }
+.discord .form__item{
+    margin-top: 0;
+    margin-bottom: 0;
+    justify-content: space-between;
+    display: flex;
+}
+.discord .form__input-wrap{
+    margin-bottom: 0;
+}
 .import h3, .export h3{
     margin-bottom: 4px;
 }
@@ -644,7 +665,7 @@ body{
     align-items: flex-start;
 }
 .form__import textarea{
-    width: 440px;
+    width: 100%;
     margin-bottom: 10px;
     height: 80px;
     padding: 6px 20px;
@@ -680,7 +701,7 @@ body{
     color: #91DCF4;
     border: 0;
     padding: 0;
-    margin-left: 13px;
+    margin-left: 17px;
     font-size: 14px;
     cursor: pointer;
     font-weight: 400;
@@ -794,4 +815,43 @@ body{
 }
 .profile{
     display: flex;
+}
+@media only screen and (max-width: 499px) {
+    .popup{
+        width: 100%;
+        height: auto;
+        min-height: 560px;
+    }
+    .header__title{
+        width: 180px;
+    }
+    .form__input{
+        width: 100%;
+    }
+    .discord .form__input-wrap{
+        width: auto;
+    }
+    .form__profile{
+        width: calc(100% - 60px);
+    }
+    .form__input-wrap{
+        width: 100%;
+    }
+    .form__input-discord{
+        width: 155px;
+    }.import, .export, .discord {
+        width: calc(100% - 60px);
+    }
+    .save__button{
+        margin-left: 10px;
+        margin-bottom: 20px;
+    }
+    .discord .save__button{
+        margin-bottom: 0;
+        margin-left: 0;
+    }
+    .discord .form__item{
+        width: calc(100% + 10px);
+        justify-content: space-between;
+    }
 }
